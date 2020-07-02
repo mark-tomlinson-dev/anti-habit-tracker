@@ -1,0 +1,16 @@
+h3 {
+	color: tomato;
+}
+
+.inputter {
+	display: flex;
+	flex-direction: column;
+	max-width: 250px;
+
+	.input-button {
+		margin-top: 10px;
+	}
+}
+
+
+
