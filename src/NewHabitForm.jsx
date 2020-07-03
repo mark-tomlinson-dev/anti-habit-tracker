@@ -1,6 +1,5 @@
 import React from 'react';
 
-
 class NewHabitForm extends React.Component {
 
   state = {
@@ -13,9 +12,9 @@ class NewHabitForm extends React.Component {
 
   handleSubmit = (e) => {
     e.preventDefault();
-		this.props.addBadHabit(this.state)
-		this.setState({userInput: "" });
-	}
+	  this.props.addBadHabit(this.state)
+	  this.setState({userInput: "" });
+  }
 
 	render() {
 		return(
@@ -23,9 +22,8 @@ class NewHabitForm extends React.Component {
 				<input className="input-box" type="text" value={this.state.userInput} onChange={this.handleChange} placeholder=""/>
 				<input className="input-button" type="submit" value="submit" />
 			</form>
-		)
+    )
 	}
 }
-
 
 export default NewHabitForm;
