@@ -4,7 +4,7 @@ const BadHabit = (props) => (
 	<div>
 		<p>{props.userInput}</p>
 	</div>
-);
+)
 
 
 
