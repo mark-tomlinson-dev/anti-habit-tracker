@@ -27,4 +27,5 @@ class NewHabitForm extends React.Component {
 	}
 }
 
+
 export default NewHabitForm;
