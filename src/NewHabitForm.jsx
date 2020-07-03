@@ -15,7 +15,7 @@ class NewHabitForm extends React.Component {
     e.preventDefault();
 		this.props.addBadHabit(this.state)
 		this.setState({userInput: "" });
-  }
+	}
 
 	render() {
 		return(
