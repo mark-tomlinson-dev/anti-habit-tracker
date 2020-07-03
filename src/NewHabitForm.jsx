@@ -2,19 +2,19 @@ import React from 'react';
 
 class NewHabitForm extends React.Component {
 
-  state = {
-    userInput: ""
-  };
+	state = {
+		userInput: ""
+	};
 
-  handleChange = e => {
-    this.setState({userInput: e.target.value});
-  }
+	handleChange = e => {
+		this.setState({userInput: e.target.value});
+	}
 
-  handleSubmit = (e) => {
-    e.preventDefault();
-	  this.props.addBadHabit(this.state)
-	  this.setState({userInput: "" });
-  }
+	handleSubmit = (e) => {
+		e.preventDefault();
+		this.props.addBadHabit(this.state)
+		this.setState({userInput: "" });
+	}
 
 	render() {
 		return(
@@ -22,7 +22,7 @@ class NewHabitForm extends React.Component {
 				<input className="input-box" type="text" value={this.state.userInput} onChange={this.handleChange} placeholder=""/>
 				<input className="input-button" type="submit" value="submit" />
 			</form>
-    )
+		)
 	}
 }
 
