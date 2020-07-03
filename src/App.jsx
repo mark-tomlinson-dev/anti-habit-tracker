@@ -1,37 +1,30 @@
 import React from 'react';
+import NewHabitForm from './NewHabitForm';
 import './App.scss';
 import './index.scss';
+import BadHabits from './BadHabits';
 
 class App extends React.Component {
-  constructor() {
-    super();
 
-    this.state = {
-      value: ''
-    };
+  state = {
+    badHabits: []
   }
 
-  handleChange = e => {
-    this.setState({value: e.target.value});
-  }
-
-  handleSubmit = e => {
-    e.preventDefault();
-    console.log(this.state.value);
-    this.setState({value: '' });
+  addBadHabit = (habit) => {
+    habit.id = Math.random();
+    let badHabits = [...this.state.badHabits, habit]
+    this.setState({
+      badHabits: badHabits
+    })
   }
 
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <h1>Anti-Habit Tracker</h1>
-          <h3>What bad habits did <i>you</i> indulge today?</h3>
-          <form className="inputter" onSubmit={this.handleSubmit}>
-            <input className="input-box" type="text" value={this.state.value} onChange={this.handleChange} placeholder=""/>
-            <input className="input-button" type="submit" value="submit" />
-          </form>        
-        </header>
+        <h1>Anti-Habit Tracker</h1>
+        <h3>What bad habits did <i>you</i> indulge today?</h3>
+        <NewHabitForm addBadHabit={this.addBadHabit} />
+        <BadHabits badHabits={this.state.badHabits} />
       </div>
     );
   }
