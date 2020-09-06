@@ -12,5 +12,4 @@ const BadHabits = ({ badHabits }) => {
 	return <div>{HabitsList}</div>;
 };
 
-
 export default BadHabits;
